@@ -1,11 +1,104 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	// .header__container
+	&__container {
+	}
+	// .header__body
+	&__body {
+		display: flex;
+		align-items: center;
+		min-height: 105px;
+		padding: 5px 0;
+		font-family: GoogleSans;
+		@include adaptiveValue("font-size", 17, 14);
+		color: #212832;
+		& > :not(:last-child) {
+			@include adaptiveValue("margin-right", 30, 15);
+		}
+	}
+	// .header__logo
+	&__logo {
+		img {
+			max-width: 100%;
+		}
+	}
+	// .header__menu
+	&__menu {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	// .header__list
+	&__list {
+		display: flex;
+		align-items: center;
+		transition: 0.5s;
+
+		@media (min-width: $mobile) {
+			& > :not(:last-child) {
+				@include adaptiveValue("margin-right", 30, 10);
+			}
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			left: -100%;
+			position: absolute;
+			top: 250%;
+			transform: translate(0, -50%);
+			font-size: 40px;
+			& > :not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+		.menu-open & {
+			top: 250%;
+			display: flex;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 100;
+			background: #fff;
+			padding: 35px;
+			border-radius: 15px;
+		}
+	}
+	// .header__item
+	&__item {
+		padding: 5px 0;
+	}
+	// .header__link
+	&__link {
+		// .header__link_border
+		&_border {
+			border: 1px solid #212832;
+			border-radius: 5px;
+			padding: 9px 21px;
+		}
+	}
+	// .header__lang
+	&__lang {
+	}
+	// .header__en
+	&__en {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		column-gap: 6px;
+	}
+}
+
 //====================================================================================================
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
+	overflow: hidden;
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
@@ -51,4 +144,3 @@
 		}
 	}
 }
-*/

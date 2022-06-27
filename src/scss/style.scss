@@ -7,31 +7,32 @@
 //&display=swap - добавить при подключении через плагин
 
 // Подключить если есть локальные файлы шрифтов
-//@import "fonts/fonts";
+@import "fonts/fonts";
 
 // Подключение иконочных шрифтов ==============================================================================================================================================================================================================================================================================
 // Подключить если есть файл иконочного шрифта
-//@import "fonts/icons";
+@import "fonts/icons";
 
 // ============================================================================================================================================================================================================================================================================================================================================================================================
 // Настройки шаблона ============================================================================================================================================================================================================================================================================================================================================================================================
 // ============================================================================================================================================================================================================================================================================================================================================================================================
 
 // Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
-$fontFamily: "";
-$fontSize: rem(14); // где 14(px) - размер шрифта по умолчанию из макета
+$fontFamily: "Poppins";
+$fontSize: rem(16); // где 14(px) - размер шрифта по умолчанию из макета
 
 // Основные цвета
-$mainColor: #000; // Цвет шрифта по умолчанию
-
+$mainColor: #5e6282; // Цвет шрифта по умолчанию
+$mainColorBlack: #14183e; // Цвет шрифта Черный
+$mainColorRed: #df6951; // Цвет шрифта Красный
 // Настройки адаптивной сетки ===============================================================================================================================================================================================================================================================================================
 
 // Минимальная ширина страницы
 $minWidth: 320;
 // Ширина полотна (макета)
-$maxWidth: 1920;
+$maxWidth: 1440;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1160;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;
@@ -75,6 +76,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	position: relative;
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
@@ -143,4 +145,431 @@ body {
 @import "footer";
 
 // Подключение стилей отдельных страниц
-@import "home";
+//@import "home";
+._icon-arrow:before {
+	content: "\e900";
+}
+._icon-arrow-steps:before {
+	content: "\e901";
+}
+._icon-faceboook:before {
+	content: "\e902";
+}
+._icon-heart:before {
+	content: "\e903";
+}
+._icon-home:before {
+	content: "\e904";
+}
+._icon-instagram:before {
+	content: "\e905";
+}
+._icon-location:before {
+	content: "\e906";
+}
+._icon-map:before {
+	content: "\e907";
+}
+._icon-sheet:before {
+	content: "\e908";
+}
+._icon-twitter:before {
+	content: "\e909";
+}
+
+// ===========================================================================
+.first {
+	padding-top: 105px;
+
+	background: url("@img/first/decor.svg") top right no-repeat;
+	// .first__container
+	&__container {
+	}
+	// .first__body
+	&__body {
+		display: flex;
+		position: relative;
+		align-items: center;
+		row-gap: 10px;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	// .first__content
+	&__content {
+		@media (min-width: $mobile) {
+			padding-top: 112px;
+			flex: 0 1 630px;
+			position: relative;
+		}
+		align-self: center;
+		position: relative;
+		z-index: 5;
+	}
+	// .first__subtitle
+	&__subtitle {
+		color: $mainColorRed;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(30, 20);
+		text-transform: uppercase;
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+	// .first__title
+	&__title {
+		font-family: Volkhov;
+		@include adaptiveValue("font-size", 84, 35);
+		line-height: math.div(89, 84);
+		letter-spacing: -0.04em;
+		color: #181e4b;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		span {
+			position: relative;
+			background: url("@img/first/Decor-line.svg") center 80% / contain no-repeat;
+		}
+	}
+	// .first__description
+	&__description {
+		font-weight: 500;
+		font-size: 16px;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(30, 16);
+		max-width: 477px;
+		&:not(:last-child) {
+			margin-bottom: 34px;
+		}
+	}
+	// .first__more
+	&__more {
+		display: flex;
+		& > :not(:last-child) {
+			@include adaptiveValue("margin-right", 44, 20);
+		}
+	}
+	// .first__button
+	&__button {
+		font-family: GoogleSans;
+		font-size: 18px;
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: math.div(23, 18);
+		text-align: center;
+		color: #ffffff;
+		padding: 18px 26px;
+		@include adaptiveValue("padding-right", 26, 10);
+		@include adaptiveValue("padding-left", 26, 10);
+		background: #f1a501;
+		box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+		border-radius: 10px;
+	}
+	// .first__play-video
+	&__play-video {
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 17px;
+		@include adaptiveValue("font-size", 17, 14);
+		line-height: math.div(26, 17);
+		color: #686d77;
+	}
+	&__play-img {
+		height: 52px;
+		flex: 0 0 52px;
+		background: #df6951;
+		box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		span {
+			flex: 1 0 auto;
+		}
+	}
+	&__box {
+		display: flex;
+		align-items: center;
+		& > :not(:last-child) {
+			margin-right: 52px;
+		}
+	}
+
+	// .first__image
+	&__image {
+		img {
+			max-width: 100%;
+			@media (max-width: 1100px) {
+				max-width: 85%;
+			}
+			@media (max-width: 1000px) {
+				max-width: 75%;
+			}
+		}
+		@media (min-width: $mobile) {
+			flex: 0 1 60%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			max-width: 100%;
+			transform: translate(50px, 0);
+			@media (max-width: 1100px) {
+				transform: translate(150px, 0);
+			}
+		}
+	}
+}
+// =====================================================================================
+.category {
+	padding-top: 105px;
+	padding-bottom: 156px;
+	// .category__container
+	&__container {
+		position: relative;
+		&::before {
+			content: "";
+			background: url("@img/category/decor.svg") top right no-repeat;
+			width: 153px;
+			height: 166px;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(50%, 0);
+		}
+	}
+	// .category__title-block
+	&__title-block {
+		&:not(:last-child) {
+			margin-bottom: 66px;
+		}
+	}
+	// .category__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 10px;
+		flex-wrap: wrap;
+	}
+	// .category__item
+	&__item {
+		display: flex;
+		flex: 1 0 230px;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		padding: 0px 43px 45px 43px;
+		border-radius: 36px;
+		position: relative;
+		background: #ffffff;
+		z-index: 1;
+
+		transition: all 0.5s ease 0s;
+		position: relative;
+		z-index: 5;
+		&:hover {
+			transition: all 0.5s ease 0s;
+			box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+			&::before {
+				content: "";
+				width: 100px;
+				height: 100px;
+				background: $mainColorRed;
+				border-radius: 30px 0px 10px;
+				position: absolute;
+				bottom: -33px;
+				left: -35px;
+			}
+		}
+	}
+	// .category__img
+	&__img {
+		min-height: 153.33px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 29px;
+		}
+		img {
+		}
+	}
+	// .category__heading
+	&__heading {
+		font-family: OpenSans;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: math.div(27, 20);
+		color: #1e1d4c;
+		flex: 1 1 auto;
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+	// .category__description
+	&__description {
+		font-weight: 500;
+		line-height: math.div(26, 16);
+	}
+}
+// ===================================================================
+.title-block {
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	& > :not(:last-child) {
+		margin-bottom: 10px;
+	}
+	// .title-block__subtitle
+	&__subtitle {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: math.div(27, 18);
+		text-align: center;
+	}
+	// .title-block__title
+	&__title {
+		font-family: Volkhov;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 50, 30);
+		line-height: math.div(64, 50);
+		text-transform: capitalize;
+		color: $mainColorBlack;
+	}
+}
+.selling {
+	// .selling__container
+	&__container {
+	}
+	// .selling__title-block
+	&__title-block {
+		&:not(:last-child) {
+			margin-bottom: 60px;
+		}
+	}
+	// .selling__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 35px;
+	}
+	// .selling__item
+	&__item {
+		display: flex;
+		flex: 1 0 220px;
+		max-width: 315px;
+		flex-direction: column;
+		background: #ffffff;
+		filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+		border-radius: 24px;
+	}
+	// .selling__img
+	&__img {
+		img {
+			max-width: 100%;
+		}
+	}
+	// .selling__content
+	&__content {
+		padding: 27px 25px 42px 20px;
+	}
+	// .selling__box
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 124.5%;
+		& > :not(:last-child) {
+			margin-right: 20px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 19px;
+		}
+	}
+	// .selling__location
+	&__location {
+	}
+	// .selling__price
+	&__price {
+	}
+	// .selling__time
+	&__time {
+		font-size: 16px;
+		display: flex;
+		column-gap: 14px;
+		& > :not(:last-child) {
+			margin-right: 14px;
+		}
+	}
+}
+// =====================================================================
+.steps {
+	// .steps__container
+	&__container {
+	}
+	// .steps__body
+	&__body {
+	}
+	// .steps__content
+	&__content {
+	}
+	// .steps__title-block
+	&__title-block {
+	}
+	// .steps__item
+	&__item {
+	}
+	// .steps__img
+	&__img {
+	}
+	// .steps__block-text
+	&__block-text {
+	}
+	// .steps__heading
+	&__heading {
+	}
+	// .steps__description
+	&__description {
+	}
+	// .steps__cart
+	&__cart {
+	}
+}
+.cart-steps {
+	// .cart-steps__img
+	&__img {
+	}
+	// .cart-steps__heading
+	&__heading {
+	}
+	// .cart-steps__box
+	&__box {
+	}
+	// .cart-steps__text
+	&__text {
+	}
+	// .cart-steps__links
+	&__links {
+	}
+	// .cart-steps__sheet
+	&__sheet {
+	}
+	// .cart-steps__map
+	&__map {
+	}
+	// .cart-steps__location
+	&__location {
+	}
+	// .cart-steps__people
+	&__people {
+	}
+	// .cart-steps__human
+	&__human {
+	}
+	// .cart-steps__like
+	&__like {
+	}
+}

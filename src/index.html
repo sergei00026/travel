@@ -1,150 +1,163 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Верстка «NEW_PROJECT_NAME»</title>
-	</head>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Главная"
+	})
 	<body>
-		<div class="rootpage">
-			<h1>Верстка «NEW_PROJECT_NAME»</h1>
-			<div class="rootpage__info">
-				Особенности проекта
-			</div>
-			<h2>Готовые страницы:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html">Главная</a></li>
-			</ol>
-			<h2>Попапы:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html#"></a></li>
-			</ol>
-			<div class="rootpage__tnx">
-				<h2>Спасибо за заказ!</h2>
-				<p>Буду рад (а) хорошему отзыву.</p>
-				<p>Обращайтесь еще!</p>
-			</div>
-			<div class="rootpage__contacts">
-				<h2>Мои контакты:</h2>
-				<p>Почта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-				<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-				<p>Соц. сеть: <a href="">ссылка на соц. сеть</a></p>
-			</div>
-		</div>
-	</body>
-	<style>
-		@charset "UTF-8";
-		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-		* ,*::before, *::after {
-			padding: 0px;
-			margin: 0px;
-			border: 0px;
-			box-sizing: border-box; 
-		}
-		html, body {
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			min-width: 320px;
-			width: 100%;
-			color: #fff;
-			background-color: #5e5373;
-		}
-		body {
-			font-family: Montserrat;
-			font-size: 100%;
-			line-height: 1;
-			font-size: 1rem;
-		}
-		a {
-			text-decoration: underline;
-			color: #ebe691
-		}
-		a:visited {
-			text-decoration: underline;
-			color: #aaa768;
-		}
-			a:hover {
-			text-decoration: none;
-		}
-		ul li {
-			list-style: none;
-		}
-		img {
-			vertical-align: top;
-		}
-		.wrapper {
-			width: 100%;
-			min-height: 100%;
-			overflow: hidden;
-		}
-		.rootpage{
-			padding: 30px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		@media (max-width: 767px) {
-			.rootpage{
-				padding:30px 15px;
-			}
-		}
-		h1 {
-			color: #ebe691;
-			font-size: 2.5rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-		@media (max-width: 767px) {
-			h1 {
-				font-size: 1.85rem;
-				margin: 0px 0px 1.25rem 0px;
-			}
-		}
-		h2 {
-			color: #ebe691;
-			font-size: 1.25rem;
-			margin: 0px 0px 1rem 0px;
-		}
-		@media (max-width: 767px) {
-			 h2 {
-				font-size: 1.125rem;
-				margin: 0px 0px 1rem 0px;
-			}
-		}
-		.rootpage__info{
-			line-height: 140%;
-			margin: 0px 0px 1.5rem 0px;
-		}
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="first">
+					<div class="first__container">
+						<div class="first__body">
+							<div class="first__content">
+								<h3 class="first__subtitle">Best Destinations around the world</h3>
+								<h1 class="first__title">Travel,<span> enjoy </span>and live a new and full life</h1>
+								<p class="first__description">Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
+								<div class="first__more">
+									<a href="" class="first__button">Find out more</a>
+									<div class="first__box">
+										<button type="button" class="first__play-video">
+											<div class="first__play-img">
+												<img src="@img/first/triangle.svg" alt="triangle">
+											</div>
+										</button>
+										<span>Play Demo</span>
+									</div>
+								</div>
+							</div>
+							<div class="first__image"><img src="@img/first/woman.png" alt="woman"></div>
+						</div>
+					</div>
+				</section>
+				<section class="category">
+					<div class="category__container">
+						<div class="category__title-block title-block">
+							<h3 class="title-block__subtitle">CATEGORY</h3>
+							<h2 class="title-block__title">We Offer Best Services</h2>
+						</div>
+						<div class="category__body">
+							<a href="" class="category__item">
+								<div class="category__img">
+									<img src="@img/category/01.svg" alt="category">
+								</div>
+								<div class="category__heading">Calculated Weather </div>
+								<div class="category__description">Engrossed listening. Park gate sell they west hard for the.</div>
+							</a>
+							<a href="" class="category__item">
+								<div class="category__img">
+									<img src="@img/category/02.svg" alt="category">
+								</div>
+								<div class="category__heading">Best Flights </div>
+								<div class="category__description">Built Wicket longer admire do barton vanity itself do in it.</div>
+							</a>
+							<a href="" class="category__item">
+								<div class="category__img">
+									<img src="@img/category/03.svg" alt="category">
+								</div>
+								<div class="category__heading">Local Events </div>
+								<div class="category__description">Barton vanity itself do in it. Preferd to men it engrossed listening. </div>
+							</a>
+							<a href="" class="category__item">
+								<div class="category__img">
+									<img src="@img/category/04.svg" alt="category">
+								</div>
+								<div class="category__heading">Customization</div>
+								<div class="category__description">We deliver outsourced aviation services for military customers</div>
+							</a>
+						</div>
+					</div>
+				</section>
+				<section class="selling">
+					<div class="selling__container">
+						<div class="selling__title-block title-block">
+							<h3 class="title-block__subtitle">Top Selling</h3>
+							<h2 class="title-block__title">Top Destinations</h2>
+						</div>
+						<div class="selling__body">
+							<div class="selling__item">
+								<div class="selling__img">
+									<img src="@img/selling/01.jpg" alt="">
+								</div>
+								<div class="selling__content">
+									<div class="selling__box">
+										<div class="selling__location">Rome, Italty</div>
+										<div class="selling__price">$5,42k</div>
+									</div>
+									<div class="selling__time _icon-location">10 Days Trip</div>
+								</div>
+							</div>
+							<div class="selling__item">
+								<div class="selling__img">
+									<img src="@img/selling/02.jpg" alt="">
+								</div>
+								<div class="selling__content">
+									<div class="selling__box">
+										<div class="selling__location">London, UK</div>
+										<div class="selling__price">$4.2k</div>
+									</div>
+									<div class="selling__time _icon-location">12 Days Trip</div>
+								</div>
+							</div>
+							<div class="selling__item">
+								<div class="selling__img">
+									<img src="@img/selling/03.jpg" alt="">
+								</div>
+								<div class="selling__content">
+									<div class="selling__box">
+										<div class="selling__location">Full Europe</div>
+										<div class="selling__price">$15k</div>
+									</div>
+									<div class="selling__time _icon-location">28 Days Trip</div>
+								</div>
+							</div>
+						</div>
 
-		.rootpage__list{
-			margin: 0px 0px 2.25rem 1.25rem;
-		}
-		.rootpage__list li:not(:last-child){
-			margin: 0px 0px 15px 0px;
-		}
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius: 200px;
-			padding: 20px 65px;
-			line-height: 140%;
-		}
-		@media (max-width: 767px){
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius:40px;
-			padding: 20px;
-		}
-		}
-		.rootpage__contacts{
-			background: #32b5a4;
-			
-		}
-		.rootpage__contacts a{
-			color: #ebe691;
-		}
-		.rootpage__tnx{
-			background: #c22d63;
-			margin: 0px 0px 1rem 0px;
-		}
-	</style>
+					</div>
+				</section>
+				<section class="steps">
+					<div class="steps__container">
+						<div class="steps__body">
+							<div class="steps__content">
+								<div class="steps__title-block title-block">
+									<h3 class="title-block__subtitle">Top Selling</h3>
+									<h2 class="title-block__title">Top Destinations</h2>
+								</div>
+								<div class="steps__item">
+									<img src="@img/steps/01.svg" alt="steps" class="steps__img">
+									<div class="steps__block-text">
+										<div class="steps__heading"></div>
+										<div class="steps__description"></div>
+									</div>
+								</div>
+							</div>
+							<div class="steps__cart">
+								<div class="cart-steps">
+									<div class="cart-steps__img">
+										<img src="@img/steps/img-cart.jpg" alt="cart">
+									</div>
+									<div class="cart-steps__heading"></div>
+									<div class="cart-steps__box">
+										<div class="cart-steps__text"></div>
+										<div class="cart-steps__links">
+											<a href="" class="cart-steps__sheet _icon-sheet"></a>
+											<a href="" class="cart-steps__map _icon-map"></a>
+											<a href="" class="cart-steps__location _icon-location"></a>
+										</div>
+									</div>
+									<div class="cart-steps__people">
+										<div class="cart-steps__human"></div>
+										<div class="cart-steps__like _icon-heart"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
 </html>

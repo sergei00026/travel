@@ -1,3 +1,131 @@
 //====================================================================================================
+.footer {
+	// .footer__container
+	&__container {
+	}
+	// .footer__body
+	&__body {
+		display: flex;
+		justify-content: space-evenly;
+		gap: 25px;
+
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 80, 20);
+		}
+		@media (max-width: 900px) {
+			flex-wrap: wrap;
+		}
+	}
+	// .footer__logoblock
+	&__logoblock {
+		flex: 0 1 30%;
+		& > :not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	// .footer__logo
+	&__logo {
+		font-weight: 500;
+		font-size: 44px;
+		line-height: math.div(66, 44);
+		color: #181e4b;
+	}
+	// .footer__text
+	&__text {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 124.5%;
+	}
+	// .footer__item
+	&__item {
+		flex: 0 1 20%;
+	}
+	// .footer__heading
+	&__heading {
+		&:not(:last-child) {
+			margin-bottom: 34px;
+		}
+		font-weight: 700;
+		font-size: 21px;
+		line-height: 124.5%;
+		color: #080809;
+	}
+	// .footer__link
+	&__link {
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 124.5%;
+	}
+	// .footer__callback
+	&__callback {
+		flex: 0 1 30%;
+	}
+	// .footer__socials
+	&__socials {
+		display: flex;
+		column-gap: 25px;
+		> a {
+			width: 41px;
+			height: 41px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #ffffff;
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+			border-radius: 50%;
+			transition: all 0.3s ease 0s;
+
+			&:hover {
+				background: conic-gradient(from 180deg at 50% 50%, #b8d2f1 0deg, #f289aa 60deg, #c68bf0 106.09deg, #d164da 153.75deg, #c963e8 221.25deg, #bfc2e8 258.75deg, #ffc999 288.75deg, #d0d8c9 315deg, #bad0f1 334.13deg, #ced8cb 358.97deg, rgba(255, 255, 255, 0) 360deg);
+				box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+				color: white;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 26px;
+		}
+	}
+	// .footer__fb
+	&__fb {
+	}
+	// .footer__inst
+	&__inst {
+	}
+	// .footer__twiter
+	&__twiter {
+	}
+	// .footer__desc
+	&__desc {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 124.5%;
+		letter-spacing: 0.005em;
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+	// .footer__app
+	&__app {
+		display: flex;
+		column-gap: 7px;
+	}
+	// .footer__google
+	&__google {
+	}
+	// .footer__apple
+	&__apple {
+	}
+	// .footer__copy
+	&__copy {
+		text-align: center;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 124.5%;
+		@include adaptiveValue("margin-bottom", 80, 20);
+	}
+}
 
 //====================================================================================================
